@@ -27,7 +27,7 @@
             "@type": "Organization",
             "name": "Cartório Ribeirão da Ilha",
             "url": "https://www.cartorioribeirao.com.br/",
-            "logo": "#",
+            "logo": "https://github.com/jeanjusten/Cartorio_Ribeirao_Ilha/blob/main/src/img/logo.png?raw=true",
             "image": "#",
             "description": "#",
             "address": {
@@ -69,7 +69,7 @@
         <div class="custom-alert-content">
             <span class="close">&times;</span>
             <div class="d-flex flex-column justify-content-center">
-                <img src="#" alt="Logo do Cartório Ribeirão da Ilha" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
+                <img src="./src/img/logowebp.webp" alt="Logo do Cartório Ribeirão da Ilha" id="brand-logo-popup" draggable="false" class="pb-1 mb-3">
                 <p id="alertMessage">
                 </p>
             </div>
@@ -80,18 +80,20 @@
     <header id="header-nav">
         <div class="navbar navbar-dark navbar-expand-lg">
             <div class="container pt-1 pb-1">
-                <img src="#" alt="Logo do Cartório Ribeirão da Ilha" id="brand-logo-2" draggable="false" class="pb-1">
-                <img src="#" alt="Logo do Cartório Ribeirão da Ilha" id="brand-logo" draggable="false" class="pb-1">
+                <img src="./src/img/logowebp.webp" alt="Logo do Cartório Ribeirão da Ilha" id="brand-logo-2" draggable="false" class="pb-1">
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-dropdown">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <nav class="collapse navbar-collapse justify-content-end" id="menu-dropdown">
                     <ul class="nav navbar-nav nav-pills">
                         <li class="nav-item">
-                            <a href="#home" class="nav-link active">Home</a>
+                            <a href="#homespy" class="nav-link active">Home</a>
                         </li>
                         <li class="nav-item">
                             <a href="#about" class="nav-link">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link">Serviços</a>
                         </li>
                         <li class="nav-item">
                             <a href="#team" class="nav-link">Titular</a>
@@ -103,7 +105,7 @@
                             <a href="#contact" class="nav-link">Contato</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#faq" class="nav-link">FAQ</a>
+                            <a href="#faq" class="nav-link">Dúvidas</a>
                         </li>
                     </ul>
                 </nav>
@@ -112,20 +114,18 @@
     </header>
     
     <div data-bs-spy="scroll" data-bs-target="#header-nav">
+        <div id="homespy"></div>
         <!--HERO SECTION-->
         <main id="home" class="">
             <!--Left Content-->
             <div class="container banner d-sm-block d-md-block d-lg-flex">
-                <div class="container d-flex flex-column container-hero-left animation-up">
-                    <h2 class="motto mx-5 text h1">.<span><strong>.</strong></span>.</h2>
-                    <p class="mx-5">
-                        .
+                <div class="container d-block container-hero-left animation-up motto-div">
+                    <img src="./src/img/logofullwebp.webp" draggable="false" alt="Logo do Cartório Ribeirão da Ilha" class="mx-5 mt-5 mb-3 logo-hero-section">
+                    <h2 class="motto mx-5 text h1">Agilidade e <span><strong>transparência</strong></span>.</h2>
+                    <p class="mx-5 p-hero">
+                        No Cartório Ribeirão da Ilha, trabalhamos com eficácia e organização para que você seja auxiliado em cada etapa do processo.
                     </p>
                     <a href="#contact" draggable="false" class="btn-link"><button class="btn btn-hero btn-block shadow-sm mx-5">Contate-nos</button></a>
-                </div>
-                <!--Right Content-->
-                <div class="container d-flex justify-content-center">
-                    <!-- <img src="#" draggable="false" alt="" class="mx-5 mt-5 logo-hero-section"> -->
                 </div>
             </div>
         </main>
@@ -140,8 +140,64 @@
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit optio, modi rerum amet incidunt numquam hic ipsa praesentium ullam quis? 
                         Dicta odit facere sint sapiente illum mollitia minima blanditiis asperiores delectus adipisci praesentium maxime recusandae repudiandae, 
                         consectetur voluptates nam soluta eum dolorum quidem?<br><br>    Exercitationem amet facere earum eaque cum consequatur repellat voluptates reprehenderit, 
-                        commodi sint et ullam, nisi, perspiciatis doloribus.
+                        commodi sint et ullam, nisi, perspiciatis doloribus. Dicta odit facere sint sapiente illum mollitia minima blanditiis asperiores delectus adipisci praesentium maxime recusandae repudiandae, 
+                        consectetur voluptates nam soluta eum dolorum quidem?
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!--SERVICES SECTION-->
+        <section id="services">
+            <!--Section SVG Divider-->
+            <div class="custom-shape-divider-top-1727206977">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="container banner d-block pt-5 pb-5">
+                <!--Content-->
+                <div class="container container-right-about mt-5 mb-3 text-center">
+                    <h2 class="motto text text-center h2 animation-up pt-4">Serviços que prestamos</h2>
+                    <p class="mx-5 text text center animation-up">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="container mb-5">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 pt-3">
+                            <div class="card">
+                            <div class="card-body">
+                                <img src="./src/img/service1.webp" class="card-icon mb-3" alt="Serviço oferecido" draggable="false">
+                                <h5 class="card-title text-center">Protocolos</h5>
+                                <p class="card-text text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt modi laboriosam expedita accusamus sunt sint ab at quas reprehenderit. Veniam cupiditate quia molestias error hic?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 pt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./src/img/service2.webp" class="card-icon mb-3" alt="Serviço oferecido" draggable="false">
+                                <h5 class="card-title text-center">Registros</h5>
+                                <p class="card-text text-center">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores nobis hic et laboriosam sed doloremque magni ipsum dolorem numquam. Nihil.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 pt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./src/img/service3.webp" class="card-icon mb-3" alt="Serviço oferecido" draggable="false">
+                                <h5 class="card-title text-center">Autenticação</h5>
+                                <p class="card-text text-center">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, est voluptate. Quae dignissimos eum atque maxime aut asperiores eveniet. Aperiam, nulla possimus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,7 +217,7 @@
                 </div>
                 <!--Content-->
                 <div class="container container-right-about mt-5 mb-5">
-                    <h2 class="motto text text-center h2 animation-up">Conheça o Titular do Cartório Ribeirão da Ilha</h2>
+                    <h2 class="motto text text-center h2 animation-up">Conheça o Titular do <br>Cartório Ribeirão da Ilha</h2>
                     <p class="mx-5 text text center animation-up">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit optio, modi rerum amet incidunt numquam hic ipsa praesentium ullam quis? 
                         Dicta odit facere sint sapiente illum mollitia minima blanditiis asperiores delectus adipisci praesentium maxime recusandae repudiandae, 
@@ -182,10 +238,53 @@
             </div>
             <div class="container banner d-block animation-up">
                 <h2 class="motto h2 text text-center animation-down" id="faq-h2">Mídias</h2>
-                <p class="text text-center pb-3 animation-down">
-                    Confira alguns vídeos de passo a passo que você pode achar útil.
+                <p class="text text-center animation-down">
+                    Confira alguns vídeos de passo a passo que você pode achar útil.<br>
+                    Você pode encontrar mais conteúdo seguindo o Cartório Ribeirão da Ilha no 
+                    <a href="https://www.instagram.com/cartorioribeiraodailha/" target="_blank" class="text-reset links-socials">Instagram</a>.
                 </p>
-                
+                <div class="container mb-5 mt-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4 pt-3">
+                            <a href="https://www.instagram.com/cartorioribeiraodailha/reel/DGQOyqMsopJ/" target="blank" class="card-anchor">
+                                <div class="card">
+                                    <h5 class="card-header p-3 text-center"><img alt="Logo do Instagram" src="./src/img/instagram.webp" class="icon-insta" draggable="false"></h5>
+                                    <div class="card-body">
+                                        <video src="./src/video/media1.mp4" controls webkit-playsinline playsinline
+                                            type="video/mp4" class="video-reels reels-card mx-auto d-block mb-4" autoplay="autoplay" loop="loop" muted="muted" alt="Vídeo Reels do Cartório Ribeirão da Ilha">
+                                        </video>
+                                        <h5 class="card-title text-center">Guia Completo: Passo a passo da Escritura Pública</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-0 col-lg-4 d-sm-block d-md-none d-lg-block pt-3">
+                            <a href="https://www.instagram.com/cartorioribeiraodailha/reel/DFx2sFeRlAn/" target="blank" class="card-anchor">
+                                <div class="card">
+                                    <h5 class="card-header p-3 text-center"><img alt="Logo do Instagram" src="./src/img/instagram.webp" class="icon-insta" draggable="false"></h5>
+                                    <div class="card-body">
+                                        <video src="./src/video/media2.mp4" controls webkit-playsinline playsinline
+                                            type="video/mp4" class="video-reels reels-card mx-auto d-block mb-4" autoplay="autoplay" loop="loop" muted="muted" alt="Vídeo Reels do Cartório Ribeirão da Ilha">
+                                        </video>
+                                        <h5 class="card-title text-center">Como regularizar um Imóvel sem Inventário</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4 pt-3">
+                            <a href="https://www.instagram.com/cartorioribeiraodailha/reel/DFdQp9sxOVz/" target="blank" class="card-anchor">
+                                <div class="card">
+                                    <h5 class="card-header p-3 text-center"><img alt="Logo do Instagram" src="./src/img/instagram.webp" class="icon-insta" draggable="false"></h5>
+                                    <div class="card-body">
+                                        <video src="./src/video/media3.mp4" controls webkit-playsinline playsinline
+                                            type="video/mp4" class="video-reels reels-card mx-auto d-block mb-4" autoplay="autoplay" loop="loop" muted="muted" alt="Vídeo Reels do Cartório Ribeirão da Ilha">
+                                        </video>
+                                        <h5 class="card-title text-center">Escritura Pública de compra e venda de Bens e Imóveis</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
             </div>
         </section>
 
@@ -200,27 +299,32 @@
             <!--Left Content-->
             <div class="container banner d-sm-block d-md-block d-lg-flex">
                 <div class="container d-flex flex-column container-hero-left animation-up">
-                    <img src="#" alt="Ícone de ajuda" id="brand-logo-3" draggable="false" class="pb-1 mb-3 mt-5">
+                    <img src="./src/img/howto-1.webp" alt="Ícone de ajuda" id="brand-logo-3" draggable="false" class="pb-1 pt-1 mb-1 mt-5">
                     <h2 class="motto mx-5 text text-center h2">Como nos encontrar?</h2>
                     <p class="mx-5 text text-center">
                         Veja como entrar em contato com o Cartório Ribeirão da Ilha.<br><br>
                         <ul>
                             <li>
+                                Através do nosso <a href="https://api.whatsapp.com/send/?phone=%2B554833643902&text&type=phone_number&app_absent=0" target="_blank" class="text-reset links-socials">Whatsapp</a>.
+                            </li><br>
+                            <li>
                                 Endereço físico: Rua João Sallum, 215, Florianópolis-SC, CEP:88047-668. <br>
                                 Atendimento: De segunda a sexta, das 09:00h às 18:00h.
-                            </li><br>
-                            <li>
-                                Através do nosso <a href="https://api.whatsapp.com/send/?phone=%2B554833643902&text&type=phone_number&app_absent=0" target="_blank" class="text-reset">Whatsapp</a>.
-                            </li><br>
-                            <li>
-                                Preenchendo o formulário e enviando-nos uma mensagem. O Cartório Ribeirão da Ilha retornará assim que possível.
                             </li>
+                            <iframe class="embed-map pt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d858.2851375794489!2d-48.529812585951305!3d-27.66354335016585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273a462e54d99b%3A0x3bbaffe3a161fd04!2sClerk%20of%20Ribeir%C3%A3o%20da%20Ilha!5e0!3m2!1sen!2sbr!4v1740027912930!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <br>
                         </ul>
                     </p>
                 </div>
                 <!--Right Content-->
                 <div class="container mt-5">
                     <form class="mx-0 form mx-auto animation-down" id="contact-form">
+                        <ul>
+                            <li>
+                                Preencha o formulário com sua mensagem.<br>
+                                Retornaremos o mais rápido possível.
+                            </li>
+                        </ul>
                         <label for="user_name" class="form-label">
                             Nome:
                         </label>
@@ -298,7 +402,7 @@
             <div class="container banner d-block animation-up">
                 <h2 class="motto h2 text text-center animation-down" id="faq-h2">Perguntas Frequentes</h2>
                 <p class="text text-center pb-3 animation-down">
-                    Tem alguma dúvida? Veja as perguntas frequentes
+                    Tem alguma dúvida? Veja as perguntas frequentes.
                 </p>
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
@@ -386,7 +490,7 @@
             <div class="container text-center text-md-start">
                 <div class="row">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4" id="footer-info">
-                        <img src="#" draggable="false" alt="Logo do Cartório Ribeirão da Ilha" id="footer-logo">
+                        <img src="./src/img/logowebp.webp" draggable="false" alt="Logo do Cartório Ribeirão da Ilha" id="footer-logo">
                     </div>
                     <!--Section Column-->
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-menu1">
@@ -394,13 +498,13 @@
                             MENU
                         </p>
                         <p>
-                            <a href="#home" class="text-reset">Home</a>
+                            <a href="#home" class="text-reset links-socials">Home</a>
                         </p>
                         <p>
-                            <a href="https://www.instagram.com/cartorioribeiraodailha/" target="_blank" class="text-reset">Instagram</a>
+                            <a href="https://www.instagram.com/cartorioribeiraodailha/" target="_blank" class="text-reset links-socials">Instagram</a>
                         </p>
                         <p>
-                            <a href="https://api.whatsapp.com/send/?phone=%2B554833643902&text&type=phone_number&app_absent=0" target="_blank" class="text-reset">Whatsapp</a>
+                            <a href="https://api.whatsapp.com/send/?phone=%2B554833643902&text&type=phone_number&app_absent=0" target="_blank" class="text-reset links-socials">Whatsapp</a>
                         </p>
                     </div>
                     <!--Section Column-->
@@ -415,7 +519,6 @@
                             Tabelião e Registrador Daniel Rosa de Almeida
                         </p>
                     </div>
-                    
                     <!--Section Column-->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!--Contact-->
@@ -437,7 +540,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                         </svg>
-                        +55 48 3364-3902
+                        +55 (48) 3364-3902
                         </p>
                     </div>
                 </div>
