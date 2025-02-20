@@ -16,7 +16,7 @@ window.onload = function() {
                 console.log("Message was sent successfully!");
 
                 modalImg.style.display = "block";
-                alertMessageContainer.innerHTML ="Seu formulário foi enviado.<br>Obrigado por escolher a J2K Imóveis!";
+                alertMessageContainer.innerHTML ="Seu formulário foi enviado.<br>Obrigado por contatar o Cartório Ribeirão da Ilha!";
                 alertBox.style.display = "block";
                 form.reset();
 
