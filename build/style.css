@@ -304,7 +304,7 @@ header {
     background-image: url(/src/img/herobg.png);
     background-size: cover;
     background-position: top left;
-    height: 100vh; 
+    height: 100svh; 
     align-items: center;
     justify-content: center;
     align-content: center;
