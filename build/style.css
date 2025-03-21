@@ -257,6 +257,34 @@ header {
     width: auto;
 }
 
+.cta-nav {
+    margin-top: 5px;
+}
+
+.cta-nav a {
+    background-color: var(--colorPrimary);
+    border-radius: 15px !important;
+    color: var(--colorTextPrimary);
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    border-bottom: 1px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .4rem 2rem;
+    transition: linear 0.2s;
+}
+
+.cta-nav a:hover {
+    background-color: var(--colorTextPrimary);
+    color: var(--colorPrimary);
+}
+
+.nav-link-cta {
+    text-align: center;
+    margin-left: 20px;
+    padding-bottom: 0;
+}
+
 .nav-item a {
     color: var(--colorTextPrimary);
     font-family: "Lexend", sans-serif;
@@ -269,7 +297,6 @@ header {
     background-color: transparent !important;
     color: var(--colorPrimary) !important;
     border-radius: 0px;
-
 }
 
 .nav-link:hover {
@@ -290,6 +317,12 @@ header {
 
 .tab-content {
     color: var(--colorTextPrimary);
+}
+
+.nav-pills {
+    display: flex;
+    align-items: center !important;
+    align-content: center;
 }
 
 /*----------------------------*/
@@ -346,7 +379,7 @@ header {
     height: 50px;
 }
 
-.container-hero-left h2, p, a {
+.container-hero-left h2, h3, h4, p, a {
     align-self: center;
     text-align: center;
 }
@@ -460,7 +493,19 @@ header {
 }
 
 .image-carousel5 {
-    object-position: left top;
+    object-position: center bottom;
+}
+
+.image-carousel6 {
+    object-position: center top;
+}
+
+.image-carousel7 {
+    object-position: center top;
+}
+
+.image-carousel8 {
+    object-position: center ;
 }
 
 /*----------------------------*/
@@ -469,10 +514,97 @@ header {
 #services {
     background-color: var(--colorBodySec);
     position: relative;
+    color: var(--colorTextPrimary);
 }
 
+#services p, ul, li{
+    color: var(--colorTextPrimary);
+}
 
+#carouselCards .carousel-inner,
+#carouselCards2 .carousel-inner  {
+    overflow: hidden;
+}
 
+#carouselCards .carousel-item,
+#carouselCards2 .carousel-inner  {
+    padding: 20px 10px;
+}
+
+#carouselCards .col-sm-6,
+#carouselCards .col-md-6,
+#carouselCards .col-lg-4,
+#carouselCards2 .col-sm-6,
+#carouselCards2 .col-md-6,
+#carouselCards2 .col-lg-4  {
+    display: flex;
+    flex-grow: 1;
+}
+
+#carouselCards .card,
+#carouselCards2 .card {
+    width: 99%;
+    display: flex;
+    height: 100%;
+    min-height: 250px; 
+    background-color: var(--colorBody);
+    border-color: transparent;
+    outline: none;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+#carouselCards .card-body,
+#carouselCards2 .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%;
+    text-align: center;
+}
+
+#carouselCards .card-body ul,
+#carouselCards2 .card-body ul {
+    text-align: left; 
+    padding-left: 0; 
+    list-style-position: inside; 
+}
+
+.card-icon {
+    max-height: 90px;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-body h5, 
+.card-body p {
+    color: var(--colorTextPrimary);
+}
+
+.card-text {
+    min-height: 55px;
+}
+
+.card-title {
+    color: var(--colorTextPrimary);
+    transition: 0.5s ease-in-out;
+}
+
+.card-title:hover {
+    color: var(--colorPrimary);
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 50px; 
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 50%; 
+}
 /*----------------------------*/
 /*CONTACT SECTION*/
 /*----------------------------*/
@@ -481,7 +613,7 @@ header {
     margin-bottom: 50px;
 }
 
-#contact ul li {
+#contact ul li, p {
     color: var(--colorTextPrimary);
 }
 
@@ -636,15 +768,16 @@ select option[value=""][disabled] {
 #team {
     position: relative;
     background-color: var(--colorBody);
+    color: var(--colorTextPrimary);
 }
 
 #team .container p {
     color: var(--colorTextPrimary);
 }
 
-/*----------------------------*/
-/*MEDIA SECTION*/
-/*----------------------------*/
+/* ---------------------------- */
+/* MEDIA SECTION */
+/* ---------------------------- */
 #media {
     position: relative;
     padding: 80px 0;
@@ -662,12 +795,13 @@ select option[value=""][disabled] {
 }
 
 .icon-insta:hover {
-    max-height: 35px;
     filter: none;
 }
 
+
+
 .card-icon {
-    max-height: 80px;
+    max-height: 90px;
     height: auto;
     width: auto;
     max-width: 100%;
@@ -675,6 +809,7 @@ select option[value=""][disabled] {
 }
 
 .card {
+    height: 100%;
     background-color: var(--colorBody);
     border-color: transparent;
     outline: none;
@@ -737,6 +872,7 @@ select option[value=""][disabled] {
     color: var(--colorPrimary);
 }
 
+
 /*----------------------------*/
 /*FAQ SECTION*/
 /*----------------------------*/
@@ -746,10 +882,12 @@ select option[value=""][disabled] {
     background-color: var(--colorBodySec);
 }
 
-
-
 #faq .container p {
     color: var(--colorTextPrimary);
+}
+
+#faq .container ul li {
+    color: var(--colorTextSecondary);
 }
 
 .accordion-item {
@@ -909,7 +1047,6 @@ select option[value=""][disabled] {
 .custom-shape-divider-top-1727206401 .shape-fill {
     fill: var(--colorBodySec);
 }
-
 
 /*FAQ-Start Divider*/
 .custom-shape-divider-top-1727206977 {
