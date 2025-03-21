@@ -96,6 +96,29 @@ body {
     animation: loading 0.75s ease infinite;
 }
 
+
+/*----------------------------*/
+/*MODAL LOADING SPINNER*/
+/*----------------------------*/
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3rem;
+    margin-bottom: 10px;
+}
+
 /*----------------------------*/
 /*ALERT BOX*/
 /*----------------------------*/
@@ -360,8 +383,18 @@ header {
     color: var(--colorTextPrimary); 
 }
 
-.p-hero {
-    max-width: 45%;
+@media screen and (max-width: 768px) {
+    .p-hero {
+        max-width: 100% !important; 
+    };
+
+    .logo-hero-section {
+        max-height: 150px !important;
+    }
+}
+
+.p-hero { 
+    max-width: 65%;
 }
 
 .logo-hero-section {
@@ -444,8 +477,9 @@ header {
 /*ABOUT SECTION*/
 /*----------------------------*/
 #about {
-    background-color: var(--colorBody);
+    background-color: var(--colorBodySec); 
     position: relative;
+    color: var(--colorTextPrimary);
 }
 
 .container-right-about p{
@@ -512,7 +546,7 @@ header {
 /*SERVICES SECTION*/
 /*----------------------------*/
 #services {
-    background-color: var(--colorBodySec);
+    background-color: var(--colorBody);
     position: relative;
     color: var(--colorTextPrimary);
 }
@@ -547,7 +581,7 @@ header {
     display: flex;
     height: 100%;
     min-height: 250px; 
-    background-color: var(--colorBody);
+    background-color: var(--colorBodySec);
     border-color: transparent;
     outline: none;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.3);

@@ -30,10 +30,54 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 //#endregion
 
-//#region Phone number masking JQuery //
-$(document).ready(function(){
+//#region JQuery 
+$(document).ready(function() {
+    // Phone mask
     $("#tel").mask("(00)00000-0000", {
         placeholder: "(00)00000-0000"
-    })
-})
+    });
+
+    // Send form with AJAX
+    $("#send-form-btn").click(function(event) {
+        event.preventDefault(); 
+
+        // Show Spinner loading
+        $("#loading").show();
+
+        var alertBox = $("#customAlertBox");
+        var alertMessageContainer = $("#alertMessage");
+        var closeImg = $(".close");
+        var modalImg = $("#brand-logo-popup");
+        var form = $("#contact-form");
+
+        $.ajax({
+            method: "POST",
+            url: "https://formsubmit.co/ajax/cartorioribeirao@cartorioribeirao.com.br",
+            dataType: "json",
+            accepts: "application/json",
+            data: form.serialize(),  
+            success: function(response) {
+                console.log("Mensagem enviada com sucesso!");
+                $("#loading").hide();
+
+                // Show modal
+                modalImg.show(); 
+                alertMessageContainer.html("Seu formulário foi enviado.<br>Obrigado por contatar o Cartório Ribeirão da Ilha!");
+                alertBox.show();  
+                // Reset form
+                form[0].reset();
+            },
+            error: function(err) {
+                console.log("Falha ao enviar a mensagem. Tente novamente.", err);
+                $("#loading").hide();
+                alertMessageContainer.html("Erro. Tente novamente");
+                alertBox.show();  
+            }
+        });
+        // Close modal
+        closeImg.click(function() {
+            alertBox.hide(); 
+        });
+    });
+});
 //#endregion
