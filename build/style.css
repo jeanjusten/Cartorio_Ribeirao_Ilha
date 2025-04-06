@@ -488,13 +488,14 @@ header {
 }
 
 .img-about-left {
-    height: 520px;
+    height: 580px;
     max-width: 100%;
     object-fit: contain; 
     align-self: center;
     transition: 0.5s ease-in-out;
     /*filter: grayscale(100%);*/
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .img-about-left:hover {
@@ -506,8 +507,9 @@ header {
 .image-carousel3, .image-carousel4,
 .image-carousel5 {
     max-width: 100%;
-    height: 400px;
+    height: 600px;
     object-fit: cover;
+    border-radius: 35px;
 }
 
 .image-carousel1 {
@@ -545,6 +547,10 @@ header {
 /*----------------------------*/
 /*SERVICES SECTION*/
 /*----------------------------*/
+.h3-yellow {
+    color: var(--colorPrimary)
+}
+
 #services {
     background-color: var(--colorBody);
     position: relative;
