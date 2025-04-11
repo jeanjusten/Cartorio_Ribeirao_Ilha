@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow:
 
-Sitemap: https://cartorioribeirao.com.br/sitemap.xml
+Sitemap: https://www.cartorioribeirao.com.br/sitemap.xml
