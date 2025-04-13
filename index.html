@@ -9,7 +9,6 @@
     <meta property="og:image:width" content="469"/>
     <meta property="og:image:height" content="468"/>
     <meta name="keywords" content="cartório, escrivania de paz, notificações extrajudiciais, serviços cartorários, documentos, escritura">
-    <link rel="icon" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="canonical" href="https://cartorioribeirao.com.br/">
     <meta itemprop="name" content="Cartório Ribeirão da Ilha">
@@ -70,6 +69,14 @@
                 "telephone": "+55 48 3364-3902",
                 "contactType": "Customer Service"
             }
+        }
+    </script>
+    <!-- Forced redirect to HTTPS + WWW -->
+    <script>
+        if (location.protocol !== 'https:' || !location.hostname.startsWith('www.')) {
+        const host = 'www.danicompany.com.br';
+        const httpsUrl = 'https://' + host + location.pathname + location.search;
+        window.location.replace(httpsUrl);
         }
     </script>
 </head>
