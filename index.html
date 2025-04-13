@@ -71,14 +71,15 @@
             }
         }
     </script>
-    <!-- Forced redirect to HTTPS + WWW -->
-    <script>
-        if (location.protocol !== 'https:' || !location.hostname.startsWith('www.')) {
-        const host = 'www.danicompany.com.br';
-        const httpsUrl = 'https://' + host + location.pathname + location.search;
-        window.location.replace(httpsUrl);
-        }
-    </script>
+        <!-- Forced redirect to HTTPS + WWW -->
+        <script>
+            if (location.protocol !== 'https:' || !location.hostname.startsWith('www.')) {
+            const host = 'www.cartorioribeirao.com.br';
+            const httpsUrl = 'https://' + host + location.pathname + location.search;
+            window.location.replace(httpsUrl);
+            }
+        </script>
+
 </head>
 
 <body>
@@ -507,9 +508,6 @@
                         <div data-bs-interval="4500" class="carousel-item">
                             <img class="d-block w-100 image-carousel5" src="./src/img/carousel6.webp" loading="lazy" alt="Cartório Ribeirão da Ilha" draggable="false">
                         </div>
-                        <div data-bs-interval="4500" class="carousel-item">
-                            <img class="d-block w-100 image-carousel5" src="./src/img/carousel7.webp" loading="lazy" alt="Cartório Ribeirão da Ilha" draggable="false">
-                        </div>
                     </div>
                     <div class="carousel-indicators">
                         <button type="button" title="Primeira imagem" class="active" data-bs-target="#carousel-images" data-bs-slide-to="0"></button>
@@ -518,7 +516,6 @@
                         <button type="button" title="Quarta imagem" data-bs-target="#carousel-images" data-bs-slide-to="3"></button>
                         <button type="button" title="Quinta imagem" data-bs-target="#carousel-images" data-bs-slide-to="4"></button>
                         <button type="button" title="Sexta imagem" data-bs-target="#carousel-images" data-bs-slide-to="5"></button>
-                        <button type="button" title="Sétima imagem" data-bs-target="#carousel-images" data-bs-slide-to="6"></button>
                     </div>
                 </div>
             </div>
