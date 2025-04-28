@@ -603,6 +603,12 @@ header {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .title-reels {
+        font-size: 0.95rem;
+    }
+}
+
 #carouselCards .card-body ul,
 #carouselCards2 .card-body ul {
     text-align: left; 
@@ -616,6 +622,14 @@ header {
     width: auto;
     max-width: 100%;
     object-fit: contain;
+}
+
+#carousel-about div img {
+    max-height: 400px;
+}
+
+.card-carousel-body img{
+    border-radius: 25px;
 }
 
 .card-body h5, 
