@@ -657,6 +657,25 @@ header {
     background-color: rgba(0, 0, 0, 0.3); 
     border-radius: 50%; 
 }
+
+.feedback-container {
+    max-width: 900px;
+    margin: 0 auto; 
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.feedback-img {
+    max-height: 200px;
+    border-radius: 8px;
+    transition: ease-in-out 0.5s;
+}
+
+.feedback-img:hover {
+    transform: scale(1.05);
+}
+
 /*----------------------------*/
 /*CONTACT SECTION*/
 /*----------------------------*/
