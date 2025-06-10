@@ -6,14 +6,14 @@ window.addEventListener("load", () => {
     document.body.removeChild(document.body.firstChild);
 })
 
-window.addEventListener('load', () => {
-    const loader = document.querySelector('.loader');
-    loader.classList.add('loader--hidden');
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader--hidden");
 });
 //#endregion
 
 //#region Closes the dropdown menu after clicking.
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     let navLinks = document.querySelectorAll(".nav-link");
     let navbarCollapse = document.querySelector(".navbar-collapse");
 

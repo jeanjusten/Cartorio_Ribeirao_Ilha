@@ -9,7 +9,7 @@ const form = document.getElementById("contact-form");
 //----------------------//
 // Send E-mail via EmailJS //
 window.onload = function() {
-    form.addEventListener('submit', function(event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         emailjs.sendForm("default_service", "contact_form", this).then((response) => {
@@ -27,7 +27,7 @@ window.onload = function() {
             });
     });
 
-    closeImg.addEventListener('click', function () {
+    closeImg.addEventListener("click", function () {
         alertBox.style.display = "none";
     });
 }
