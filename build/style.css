@@ -7,7 +7,7 @@
     --colorPrimary: #ecbb31;
 
     --colorButton:  #ecbb31;
-    --colorButtonHover: #ecbb31;
+    --colorButtonHover: #916a00;
 
     --colorTextPrimary: #ffffff;
     --colorTextSecondary: #000000;
@@ -1143,3 +1143,63 @@ select option[value=""][disabled] {
     fill: var(--colorBodySec);
 }
 
+/* Wedding Form Section */
+label {
+    color: var(--colorTextPrimary);
+    display: block;
+    margin-top: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #000000;
+}
+
+.input-padding {
+    margin-top: 4px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+input[type="file"] {
+    border: none;
+    margin-top: 4px;
+    background: transparent;
+    color: rgb(194, 194, 194) !important;
+    outline: 2px solid var(--colorAccordionBodyCollapsed) !important;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background: var(--colorBodySec);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.small-note {
+    color: white;
+}
+
+.container-wedding-form {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: var(--colorAccordionBody);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.send-wedding-form-btn {
+    color: black !important;
+    font-weight: bold;
+}
+
+.send-wedding-form-btn:hover {
+    background: white !important;
+}
