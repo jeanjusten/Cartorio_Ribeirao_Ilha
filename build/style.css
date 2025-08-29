@@ -1152,6 +1152,16 @@ label {
     margin-top: 8px;
 }
 
+/* Input becomes valid only after the field is completed */
+.input-completo {
+    border-color: #28a745 !important;
+    background-color: #e6f9ec !important; 
+}
+.input-incompleto {
+    border-color: #ff9e1f !important; 
+    background-color: #fff !important;
+}
+
 input, select {
     width: 100%;
     padding: 10px;
@@ -1185,6 +1195,25 @@ input[type="file"] {
 
 .small-note {
     color: white;
+}
+
+.video-reels-wedding {
+    max-height: 700px;
+}
+
+.container-wedding-cta {
+    background-color: var(--colorBody);
+    outline: 3px solid white;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 4px;
+    padding-inline: 25px;
+}
+
+.container-wedding-cta p a {
+    align-self: center;
+    text-align: center;
+    vertical-align: center;
 }
 
 .container-wedding-form {

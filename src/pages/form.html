@@ -283,48 +283,75 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js plugins/jquery.mask.min.js"></script>
     <script src="./build/script.js"></script>
-    <!--Mask for Inputs-->
+    <!--Mask for Inputs, loader and button disabled-->
     <script>
-        // ID MASK: xx.xxx.xxx-x
-        const identidade = document.getElementById('identidade');
-        identidade.addEventListener('input', function() {
-            let x = this.value.replace(/\D/g,'').slice(0,9); // numbers only, max 9 digits
+        const form = document.querySelector("form");
+        const submitBtn = document.getElementById("submit-form-btn");
+        const identidadeInput = document.getElementById("identidade");
+        const cpfInput        = document.getElementById("cpf");
+        const whatsappInput   = document.getElementById("whatsapp");
+        const telefoneInput   = document.getElementById("telefone");
+
+        // Masks
+        identidadeInput.addEventListener('input', function() {
+            let x = this.value.replace(/\D/g,'').slice(0,9);
             x = x.replace(/^(\d{2})(\d)/,'$1.$2');
             x = x.replace(/^(\d{2})\.(\d{3})(\d)/,'$1.$2.$3');
             x = x.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/,'$1.$2.$3-$4');
             this.value = x;
+            atualizarCorCampo(this, 9);
+            verificarFormulario();
         });
-        // Phone
-        const telefone = document.getElementById('telefone');
-        telefone.addEventListener('input', function() {
-            this.value = this.value.replace(/\D/g, ''); // numbers only
-        });
-        // CPF MASK: xxx.xxx.xxx-xx
-        const cpf = document.getElementById('cpf');
-        cpf.addEventListener('input', function() {
-            let x = this.value.replace(/\D/g,'').slice(0,11); // numbers only, max 11 digits
+        cpfInput.addEventListener('input', function() {
+            let x = this.value.replace(/\D/g,'').slice(0,11);
             x = x.replace(/(\d{3})(\d)/,'$1.$2');
             x = x.replace(/(\d{3})\.(\d{3})(\d)/,'$1.$2.$3');
             x = x.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})$/,'$1.$2.$3-$4');
             this.value = x;
+            atualizarCorCampo(this, 11);
+            verificarFormulario();
         });
-        // Máscara para WhatsApp: (xx)xxxxx-xxxx
-        const whatsapp = document.getElementById('whatsapp');
-        whatsapp.addEventListener('input', function() {
-            let x = this.value.replace(/\D/g,'').slice(0,11); // numbers only, max 11 digits
+        whatsappInput.addEventListener('input', function() {
+            let x = this.value.replace(/\D/g,'').slice(0,11);
             if(x.length > 0) x = '(' + x;
             if(x.length > 3) x = x.slice(0,3) + ') ' + x.slice(3);
             if(x.length > 10) x = x.slice(0,10) + '-' + x.slice(10);
             this.value = x;
+            atualizarCorCampo(this, 11);
+            verificarFormulario();
         });
-    </script>
-    <!--Loader for Send Button-->
-    <script>
-        document.querySelector("form").addEventListener("submit", function(e) {
-            const btn = document.getElementById("submit-form-btn");
-            btn.disabled = true;
-            btn.innerText = "Enviando...";
-            // Loading Overlay
+        telefoneInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g,'');
+            verificarFormulario();
+        });
+        // Atualiza cor do campo
+        function atualizarCorCampo(input, tamanhoExato) {
+            const numeros = input.value.replace(/\D/g,'');
+            if(numeros.length === tamanhoExato) {
+                input.classList.add("input-completo");
+                input.classList.remove("input-incompleto");
+            } else {
+                input.classList.add("input-incompleto");
+                input.classList.remove("input-completo");
+            }
+        }
+        // Verifica se formulário pode habilitar botão
+        function verificarFormulario() {
+            let todosPreenchidos = form.checkValidity();
+            let identidadeNumeros = identidadeInput.value.replace(/\D/g,'');
+            let cpfNumeros        = cpfInput.value.replace(/\D/g,'');
+            let whatsappNumeros   = whatsappInput.value.replace(/\D/g,'');
+            let valididadeEspecial = identidadeNumeros.length === 9 &&
+                                    cpfNumeros.length === 11 &&
+                                    whatsappNumeros.length === 11;
+            submitBtn.disabled = !(todosPreenchidos && valididadeEspecial);
+        }
+        // Button starts disabled
+        submitBtn.disabled = true;
+        // Loader after send
+        form.addEventListener("submit", function(e) {
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Enviando...";
             document.getElementById("loading-overlay").style.display = "flex";
         });
     </script>
