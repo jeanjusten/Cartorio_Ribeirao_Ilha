@@ -118,4 +118,3 @@ try {
     echo "<h2>Erro ao enviar inscrição</h2>";
     echo "<p>Detalhes do erro: {$mail->ErrorInfo}</p>";
 }
-?>
