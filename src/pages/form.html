@@ -294,13 +294,11 @@
             x = x.replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/,'$1.$2.$3-$4');
             this.value = x;
         });
-
         // Phone
         const telefone = document.getElementById('telefone');
         telefone.addEventListener('input', function() {
             this.value = this.value.replace(/\D/g, ''); // numbers only
         });
-
         // CPF MASK: xxx.xxx.xxx-xx
         const cpf = document.getElementById('cpf');
         cpf.addEventListener('input', function() {
@@ -310,7 +308,6 @@
             x = x.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})$/,'$1.$2.$3-$4');
             this.value = x;
         });
-
         // Máscara para WhatsApp: (xx)xxxxx-xxxx
         const whatsapp = document.getElementById('whatsapp');
         whatsapp.addEventListener('input', function() {

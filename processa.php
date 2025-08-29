@@ -108,7 +108,7 @@ try {
     }
 
     $mail->send();
-    header("Location: obrigado.php");
+    header("Location: obrigado.html");
     exit();
     //echo "<h2>Inscrição enviada com sucesso!</h2>";
     //echo "<p>Obrigado, $nome! Seu formulário foi recebido!</p>";
