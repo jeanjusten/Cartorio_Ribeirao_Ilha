@@ -82,6 +82,8 @@ Todos os documentos estão anexados a este e-mail.
 
 // Envia com PHPMailer
 $mail = new PHPMailer(true);
+$mail->CharSet = "UTF-8";
+$mail->Encoding = "base64";
 
 try {
     $mail->isSMTP();
@@ -106,9 +108,11 @@ try {
     }
 
     $mail->send();
-    echo "<h2>Inscrição enviada com sucesso!</h2>";
-    echo "<p>Obrigado, $nome! Seu formulário foi recebido!</p>";
-    echo "<p>Não esqueça de comparecer ao Cartório no horário agendado para concluir a habilitação.</p>";
+    header("Location: obrigado.php");
+    exit();
+    //echo "<h2>Inscrição enviada com sucesso!</h2>";
+    //echo "<p>Obrigado, $nome! Seu formulário foi recebido!</p>";
+    //echo "<p>Não esqueça de comparecer ao Cartório no horário agendado para concluir a habilitação.</p>";
 
 } catch (Exception $e) {
     echo "<h2>Erro ao enviar inscrição</h2>";
