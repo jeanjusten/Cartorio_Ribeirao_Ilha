@@ -26,6 +26,7 @@ $cpf        = $_POST['cpf'] ?? '';
 $telefone   = $_POST['telefone'] ?? '';
 $whatsapp   = $_POST['whatsapp'] ?? '';
 $regime     = $_POST['regime'] ?? '';
+$data       = $_POST['data_agendamento'] ?? '';
 $agendamento= $_POST['agendamento'] ?? '';
 
 // Função que salva arquivos com validação de tipo
@@ -75,6 +76,7 @@ CPF: $cpf
 Telefone: $telefone
 WhatsApp: $whatsapp
 Regime de Bens: $regime
+Dia Agendado: $data
 Horário Agendado: $agendamento
 
 Todos os documentos estão anexados a este e-mail.
