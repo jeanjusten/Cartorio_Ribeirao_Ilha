@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 // Form Settings
-$destinatario = "cartorioribeirao@cartorioribeirao.com.br"; // E-mail que receberá os dados
+$destinatario = "jean.cjm@hotmail.com" //"cartorioribeirao@cartorioribeirao.com.br"; // E-mail que receberá os dados
 $assunto = "Nova Inscrição - Casamento Coletivo";
 
 // SMTP Gmail
