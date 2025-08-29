@@ -163,7 +163,7 @@
                 <div class="note">
                     * É obrigatório comparecer ao Cartório Ribeirão da Ilha para entregar os documentos e realizar a habilitação após a inscrição online. Agende o seu comparecimento:
                 </div>
-                <label for="data_agendamento" class="mb-2 pt-3">Selecione a Data:</label>
+                <label for="data_agendamento" class="mb-2 pt-3">Agendamento da Data:</label>
                 <input type="date" id="data_agendamento" name="data_agendamento" min="2025-09-10" max="2025-10-17" required>
                 <small class="small-note">* Escolha um dia da semana entre 10/09 e 17/10.</small>
                 <label for="agendamento" class="mb-2 pt-3">Agendamento de Horário no Cartório:</label>
@@ -171,7 +171,6 @@
                 <small class="small-note">* Escolha um horário entre 9h e 14h.</small>
                 <button id="submit-form-btn" class="btn btn-send btn-primary btn-block shadow-sm mt-3 send-wedding-form-btn" type="submit">Enviar Inscrição</button>
                 </form>
-
                 <div class="note">
                 ** Para se inscrever, também é necessário procurar o Cartório Ribeirão da Ilha e dar entrada no processo de habilitação dentro do prazo legal.
                 </div>
@@ -288,6 +287,8 @@
         const whatsappInput   = document.getElementById("whatsapp");
         const telefoneInput   = document.getElementById("telefone");
         const inputData       = document.getElementById("data_agendamento");
+        const inputHorario    = document.getElementById("agendamento");
+        const selectRegime    = document.getElementById("regime");
         // Masks
         identidadeInput.addEventListener('input', function() {
             let x = this.value.replace(/\D/g,'').slice(0,9);
@@ -360,10 +361,9 @@
             let identidadeNumeros = identidadeInput.value.replace(/\D/g,'');
             let cpfNumeros        = cpfInput.value.replace(/\D/g,'');
             let whatsappNumeros   = whatsappInput.value.replace(/\D/g,'');
-            let valididadeEspecial = identidadeNumeros.length === 9 &&
-                cpfNumeros.length === 11 &&
-                whatsappNumeros.length === 11;
-                submitBtn.disabled = !(todosPreenchidos && valididadeEspecial);
+            let valididadeEspecial = identidadeNumeros.length === 9 && cpfNumeros.length === 11 && whatsappNumeros.length === 11;
+            console.log({todosPreenchidos, identidadeNumeros, cpfNumeros, whatsappNumeros, valididadeEspecial});
+            submitBtn.disabled = !(todosPreenchidos && valididadeEspecial);
         }
         // Button starts disabled
         submitBtn.disabled = true;
@@ -373,6 +373,11 @@
             submitBtn.innerText = "Enviando...";
             document.getElementById("loading-overlay").style.display = "flex";
         });
+        // Trigger verification on load and on fields
+        verificarFormulario(); 
+        inputData.addEventListener("change", verificarFormulario);
+        inputHorario.addEventListener("change", verificarFormulario);
+        selectRegime.addEventListener("change", verificarFormulario);
     </script>
     <!--Libraries and Loader Script-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
