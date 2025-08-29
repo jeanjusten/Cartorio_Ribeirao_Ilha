@@ -293,6 +293,7 @@
         const cpfInput        = document.getElementById("cpf");
         const whatsappInput   = document.getElementById("whatsapp");
         const telefoneInput   = document.getElementById("telefone");
+        const inputData       = document.getElementById("data_agendamento");
         // Masks
         identidadeInput.addEventListener('input', function() {
             let x = this.value.replace(/\D/g,'').slice(0,9);
@@ -325,7 +326,30 @@
             this.value = this.value.replace(/\D/g,'');
             verificarFormulario();
         });
-        // Update field color
+        // Date validation
+        inputData.addEventListener("input", function () {
+            const dataSelecionada = new Date(this.value);
+            const diaSemana = dataSelecionada.getUTCDay(); // 0=Sunday, 6=Saturday
+            if (diaSemana === 0 || diaSemana === 6) {
+                alert("Por favor, selecione um dia útil (segunda a sexta).");
+                this.value = ""; // Clears invalid field input
+            }
+            verificarFormulario();
+        });
+        // Format (DD-MM-YYYY)
+        form.addEventListener("submit", function (e) {
+            const dataInput = inputData.value;
+            if (dataInput) {
+                const [ano, mes, dia] = dataInput.split("-");
+                const dataFormatada = `${dia}-${mes}-${ano}`;
+                const hidden = document.createElement("input");
+                hidden.type = "hidden";
+                hidden.name = "data_agendamento_formatada";
+                hidden.value = dataFormatada;
+                this.appendChild(hidden);
+            }
+        });
+        // Update Field Color if valid or not
         function atualizarCorCampo(input, tamanhoExato) {
             const numeros = input.value.replace(/\D/g,'');
             if(numeros.length === tamanhoExato) {
@@ -336,43 +360,20 @@
                 input.classList.remove("input-completo");
             }
         }
-        // Only week days
-        const inputData = document.getElementById("data_agendamento");
-        inputData.addEventListener("input", function () {
-            const dataSelecionada = new Date(this.value);
-            const diaSemana = dataSelecionada.getUTCDay(); // 0=Sunday, 6=Saturday
-            if (diaSemana === 0 || diaSemana === 6) {
-            alert("Por favor, selecione um dia útil (segunda a sexta).");
-            this.value = ""; // limpa a seleção inválida
-            }
-        });
-        // Send in DD-MM-YYYY format
-        document.querySelector("form").addEventListener("submit", function (e) {
-            const dataInput = inputData.value;
-            if (dataInput) {
-            const [ano, mes, dia] = dataInput.split("-");
-            const dataFormatada = `${dia}-${mes}-${ano}`;
-            const hidden = document.createElement("input");
-            hidden.type = "hidden";
-            hidden.name = "data_agendamento_formatada";
-            hidden.value = dataFormatada;
-            this.appendChild(hidden);
-            }
-        });
-        // Verify if form can enable the button
+        // Verifies if button can be enabled
         function verificarFormulario() {
             let todosPreenchidos = form.checkValidity();
             let identidadeNumeros = identidadeInput.value.replace(/\D/g,'');
             let cpfNumeros        = cpfInput.value.replace(/\D/g,'');
             let whatsappNumeros   = whatsappInput.value.replace(/\D/g,'');
             let valididadeEspecial = identidadeNumeros.length === 9 &&
-                                    cpfNumeros.length === 11 &&
-                                    whatsappNumeros.length === 11;
-            submitBtn.disabled = !(todosPreenchidos && valididadeEspecial);
+                cpfNumeros.length === 11 &&
+                whatsappNumeros.length === 11;
+                submitBtn.disabled = !(todosPreenchidos && valididadeEspecial);
         }
         // Button starts disabled
         submitBtn.disabled = true;
-        // Loader after send
+        // Loader after form is sent
         form.addEventListener("submit", function(e) {
             submitBtn.disabled = true;
             submitBtn.innerText = "Enviando...";
